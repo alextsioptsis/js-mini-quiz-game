@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Άσκηση 4</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+        #quizResult { font-size: 1.2em; font-weight: bold; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <h2>What is the capital of Greece?</h2>
+    
+    <button onclick="checkAnswer('Athens')">Athens</button>
+    <button onclick="checkAnswer('Rome')">Rome</button>
+    <button onclick="checkAnswer('Paris')">Paris</button>
+
+    <p id="quizResult"></p>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === 'Athens') {
+                document.getElementById("quizResult").innerHTML = "Correct";
+                document.getElementById("quizResult").style.color = "green";
+            } else {
+                document.getElementById("quizResult").innerHTML = "Wrong";
+                document.getElementById("quizResult").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
